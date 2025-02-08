@@ -153,3 +153,51 @@ const tl = gsap.timeline({ defaults: { duration: 1 } });
       scale : 1.2 // Smooth animation effect
     },
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".about-containers .details-container", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.3, // Stagger the animation for each child
+        scrollTrigger: {
+            trigger: "#experience",
+            start: "top 35%", // Animation starts when the section is 75% into the viewport
+            toggleActions: "play none none reverse", // Play animation on scroll-in and reverse on scroll-out
+        }
+    });
+});
+
+  document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".about-containers .education-details-container", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.3, // Stagger the animation for each child
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top 35%", // Animation starts when the section is 75% into the viewport
+            toggleActions: "play none none reverse", // Play animation on scroll-in and reverse on scroll-out
+        }
+    });
+});
+
+  document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".about-containers .projects-details-container", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.3, // Stagger the animation for each child
+        scrollTrigger: {
+            trigger: "#projects",
+            start: "top 35%", // Animation starts when the section is 75% into the viewport
+            toggleActions: "play none none reverse", // Play animation on scroll-in and reverse on scroll-out
+        }
+    });
+});
